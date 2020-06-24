@@ -15,14 +15,10 @@ const create = async (req, res) => {
     return res.status(200).json(result)
   } catch (err) {
     return res.status(400).json({
-      error: errorHandler.getErrorMessage(err)
-    
+      error: errorHandler.getErrorMessage(err) })
   }
 }
-
-/**
- * Load enrollment and append to req.
- */
+  
 const enrollmentByID = async (req, res, next, id) => {
   try {
     let enrollment = await Enrollment.findById(id)
