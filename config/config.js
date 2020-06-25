@@ -9,4 +9,13 @@ const config = {
     '/mernproject'
 }
 
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://AlexKorir:Korir2020$@cluster0-hgqwy.mongodb.net/qitclassroom?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
 export default config
