@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: 20,
     marginBottom: theme.spacing(2),
     padding: 20,
-    backgroundColor: '#ffffff' 
+    backgroundColor: '#ffb8b8' 
   },
   extraTop: {
     marginTop: theme.spacing(12)
